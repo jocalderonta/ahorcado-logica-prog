@@ -11,7 +11,7 @@ intentos_restantes = 6
 letras_adivinadas = []
 progreso = []
 
-#Con el condicional for rrecorremos la palabra secreta letra por letra y agtrergamos y gión bajo, lo cual simula la cantidad de letras que tiene la palabra secreta y el progreso del jugador.
+#Con el condicional for rrecorremos la palabra secreta letra por letra y agrergamos y gión bajo, lo cual simula la cantidad de letras que tiene la palabra secreta y el progreso del jugador.
 for letra in palabra_secreta:
     progreso.append("_")
 
@@ -20,13 +20,12 @@ print("¡BIENVENIDO AL JUEGO DEL AHORCADO!")
 print ("=" * 40)  
 print(f"Reglas:\n1. Debes adivinar la palabra secreta letra por letra.\n2. Tienes {intentos_restantes} intentos antes de perder.\n3. Si la letra ya fue usada, no se descuenta intento.\n4. ¡Buena suerte!")
 
-
 #El juego continúa mientras tengamos los suficientes intentos y no hayamos completado la palabra
 while intentos_restantes > 0 and "_" in progreso:
     print("\nPalabra: ", " ".join(progreso)) #Se muestra la palabra con sus letras reveladas.Con join convertimos la lista en un solo texto y con espacio entre ellos
     print("Letras usadas:",letras_adivinadas) #Se muestra la lista sde la letras que ya se usó
     letra = input("Ingresa una letra: ").lower() #Se pide al usuario que ingrese una letra y se convierte a minúscula
-    
+
     #Se verifica que si la letra ingresada ya fue intentada anteriormente.
     if letra in letras_adivinadas:
         print("Ya intentaste esa letra. Prueba con otra.")
@@ -48,11 +47,13 @@ while intentos_restantes > 0 and "_" in progreso:
 
 #Al final se realiza la verificación de si se ha completado la palabra secreta.
 if "_" not in progreso:
-    print("\n¡Felicidades! Ganaste:", palabra_secreta)
+    print("\n¡Felicidades! Ganaste:")
     print("La palabra secreta era:", palabra_secreta)
 else:
     print("\n¡Perdiste! Se acabaron los intentos :)")
     print("La palabra secreta era:", palabra_secreta)
+
+
 
     
 
