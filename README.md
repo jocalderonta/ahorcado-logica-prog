@@ -33,7 +33,7 @@ https://drive.google.com/file/d/1EBDR2_IfGn3GJDX2FCOfzYvFqMmyVYIb/view?usp=shari
 https://drive.google.com/file/d/1Hnb4wPhGKI-yNLi9KQCxcBoLfUvsxIOd/view?usp=sharing
 
 ### Proyecto Integrador
-[pendiente — agregar enlace cuando esté listo]
+
 
 
 
