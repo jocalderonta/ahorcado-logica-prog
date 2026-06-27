@@ -1,6 +1,7 @@
+#Importar el modulo random para poder seleccionar una palabra aleatoria.
 import random
 
-#Tupla porque la lista de palabras no cambia durante el juego
+#Usamos tupla porque no cambia la lista de palabras durante el juego
 palabras = ("python", "programacion", "teclado", "universidad", "monitor", "linux")
 
 palabra_secreta = random.choice(palabras)
@@ -18,6 +19,7 @@ print("¡BIENVENIDO AL JUEGO DEL AHORCADO!")
 print("=" * 40)
 print(f"Reglas:\n1. Debes adivinar la palabra secreta letra por letra.\n2. Tienes {intentos_restantes} intentos antes de perder.\n3. Si la letra ya fue usada, no se descuenta intento.\n4. ¡Buena suerte!")
 
+#El juego continúa mientras tengamos los suficientes intentos y no hayamos completado la palabra
 while intentos_restantes > 0 and "_" in progreso:
     print(f"\nPalabra: {' '.join(progreso)}")
     print(f"Letras usadas: {letras_adivinadas}")
@@ -33,7 +35,8 @@ while intentos_restantes > 0 and "_" in progreso:
 
     else:
         letras_adivinadas.append(letra)
-
+        
+#Verificación de si la letra ingresada está dentro de la palabra secreta.
         if letra in palabra_secreta:
             #Revela la letra en cada posición donde aparece
             for i in range(len(palabra_secreta)):
